@@ -1,26 +1,19 @@
 <template>
-  <div>
-    <Componente/>
-    <p>o dado do app é: {{ testando }}</p>
+  <div id="app">
+    <router-view></router-view>
   </div>
+
 </template>
 
 <script>
-import Componente from './components/component.vue'
 
 export default {
   name: 'App',
-  components: {
-    Componente
-  },
-  data() {
-    return {
-      testando: "Teste"
-    }
+  components:{
   }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
