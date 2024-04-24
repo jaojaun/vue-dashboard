@@ -1,0 +1,30 @@
+@import '@/assets/scss/_main';
+
+.cards-content{
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin:auto;
+
+    .card{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+.content-lists{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .list{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+
+    }
+}

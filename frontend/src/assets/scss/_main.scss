@@ -4,6 +4,17 @@
 .main {
     display: flex;
     height: 100vh;
-    flex-direction: row;
     font-family: 'Roboto', 'sans-serif';
+    background-color: $purple;
+}
+.content-pages{
+    padding: 15px;
+    background-color: #EBEBEB;
+    min-height: 700px;
+}
+.title-pages{
+    
+    p{
+        font-size: 35px;
+    }
 }
