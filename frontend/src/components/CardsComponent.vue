@@ -18,7 +18,7 @@ export default {
         title: String,
         percent: String,
         subtitle: String,
-        qtd: String,
+        qtd: Number,
     }
 }
 </script>

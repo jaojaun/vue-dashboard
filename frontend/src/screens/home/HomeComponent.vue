@@ -9,29 +9,29 @@
 
                 <div class="cards-content">
                     <div class="card">
-                        <CardsComponent :title="'Clientes'" :percent="'7%'" :subtitle="'Total'" :qtd="'7590'"/>
+                        <CardsComponent :title="'Clientes'" :percent="'7%'" :subtitle="'Total'" :qtd="clientes.length"/>
                     </div>
 
                     <div class="card">
-                        <CardsComponent :title="'Produtos'" :percent="'12%'" :subtitle="'Todos'" :qtd="'350'"/>
+                        <CardsComponent :title="'Produtos'" :percent="'12%'" :subtitle="'Todos'" :qtd="produtos.length"/>
                     </div>
 
                     <div class="card">
-                        <CardsComponent :title="'Serviços'" :percent="'3%'" :subtitle="'Todos'" :qtd="'270'"/>
+                        <CardsComponent :title="'Serviços'" :percent="'3%'" :subtitle="'Todos'" :qtd="clientes.length"/>
                     </div>
 
                     <div class="card">
-                        <CardsComponent :title="'Relatórios'" :percent="'22%'" :subtitle="'Lucro'" :qtd="'30'"/>
+                        <CardsComponent :title="'Relatórios'" :percent="'22%'" :subtitle="'Lucro'" :qtd="clientes.length"/>
                     </div>
                 </div>
 
                 <div class="content-lists">
                     <div class="list">
-                        <ListsComponent :data="users" :description="'Clientes'" :columns="['Nome', 'E-mail']"/>
+                        <ListsComponent :data="clientes" :description="'Clientes'" :columns="['Nome', 'E-mail']"/>
                     </div>
 
                     <div class="list">
-                        <ListsComponent :data="users" :description="'Produtos'" :columns="['Nome', 'Valor']"/>
+                        <ListsComponent :data="produtos" :description="'Produtos'" :columns="['Nome', 'Valor']"/>
                     </div>
                 </div>
             </div>
@@ -50,20 +50,25 @@ export default {
     name: "Home",
     data(){
         return{
-            users:[]
+            clientes:[],
+            produtos:[]
         }
     },  
     mounted(){
-        this.getUsers();
+        this.getData();
     },  
     methods: {
-        async getUsers(){
-            const response = await axios.get('https://jsonplaceholder.typicode.com/users')
-            if(response.status == 200){
-                this.users = response.data
-            }else{
-                console.error("Ocorreu um erro na requisição")
+        async getData(){
+
+            try{
+                let response = await axios.get('http://localhost:8000/api')
+                
+                this.clientes = response.data.clientes,
+                this.produtos = response.data.produtos
+            }catch(error){
+                console.error("Aconteceu um erro: "+error.response.status)
             }
+
         }
     },
     components: {
