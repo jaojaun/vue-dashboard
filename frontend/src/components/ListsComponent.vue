@@ -40,35 +40,41 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/scss/_main';
-.list{
-    background-color: $purple;
-    width: 80%;
-    border-radius: 15px;
-    padding: 10px;
-    margin-left: 10px;
+.lists{
+    margin-top: 5%;
 
-    .title{
-        font-size: 25px;
+    .list{
+        background-color: $purple-dark;
+        width: 80%;
+        border-radius: 15px;
         padding: 10px;
-    }
-    .content{
-        height: 90%;
-        width: 100%; 
+        margin-left: 10px;
+        box-shadow: 3px 5px 15px $green;
 
-        .table{
-            height: 100%;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            margin: 20px;
-            flex-direction: column;
+        .title{
+            font-size: 25px;
+            padding: 10px;
+            color: $white
+        }
+        .content{
+            height: 90%;
+            width: 100%; 
 
-            .name{
-                margin-top: 10px;
-                font-size: 20px;
-                display: flex;
+            .table{
+                height: 100%;
+                width: 100%;
                 justify-content: center;
                 align-items: center;
+                margin: 20px;
+                flex-direction: column;
+
+                .name{
+                    margin-top: 10px;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }

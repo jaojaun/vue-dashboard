@@ -1,8 +1,4 @@
 import { createWebHistory , createRouter} from 'vue-router'
-
-import '@fortawesome/free-brands-svg-icons'
-import '@fortawesome/free-regular-svg-icons'
-import '@fortawesome/free-solid-svg-icons'
 import LoginComponent from './../screens/login/LoginComponent.vue'
 import HomeComponent from './../screens/home/HomeComponent.vue'
 import ProdutosComponent from './../screens/produtos/ProdutosComponent.vue'

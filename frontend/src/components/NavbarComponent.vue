@@ -1,9 +1,11 @@
 <template>
   <div class="navbar">
-      <h2 class="logo">LOGO MARCA <i class="fa fa-sign-out-alt"></i></h2>
-      <div class="logout">
-        <a @click.prevent="logout" class="logout">SAIR</a>
-      </div>
+    <div class="content-logo">
+      <h2 class="logo">L</h2>
+    </div>
+    <div class="logout">
+      <a @click.prevent="logout" class="logout">SAIR</a>
+    </div>
   </div>
 </template>
 
@@ -23,11 +25,21 @@ export default {
   display: flex;
   width: 100%;
   align-items: center;
+  background-color: #CCC;
   
-  .logo{
-    width: 175px;
-    height: 30px;
-    color: #fff;
+  .content-logo{
+    border: 3px solid #3EB489;
+    box-shadow: 2px 3px 12px #3EB489;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    display: flex;
+
+    .logo{
+      color: #fff;
+      margin: 35%,
+    }
   }
 
   .logout{
@@ -36,7 +48,6 @@ export default {
     font-size: large;
     color: #fff;
     text-decoration: none;
-    margin-left: 450px;
   }
 }
 </style>

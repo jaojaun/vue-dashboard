@@ -1,22 +1,31 @@
 <template>
     <div class="main">
+        <div class="content-img">
+            <img class="img" src="./../../assets/imgs/graf.png">
+        </div>
         <div class="login">
-            <div class="content-login">
-                <header>
-                    <h1>Login do sistema</h1>
-                </header>
-                <div class="form">
+            <div class="content-login form-group">
+                <div class="header">
+                    <h2 class="text-h4 mb-3">Welcome to sistem!</h2>
+                    <p class="mb-0">Please sign-in to your account and start</p>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" />
+                </div>
+                <div class="my-3">
                     <form>
-                        <div class="inputContent">
-                            <label for="exampleInputEmail1" class="input">E-mail</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        </div>
-                        <div class="inputContent">
-                            <label for="exampleInputPassword1" class="input">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <button type="submit" class="btn-content" @click.prevent="login">Submit</button>
+                        <button type="submit" class="btn btn-primary" @click.prevent="login">
+                            <span>Login</span>
+                        </button>
                     </form>
+                </div>
+                <div class="d-flex align-center flex-wrap">
+
                 </div>
             </div>
         </div>
@@ -24,6 +33,7 @@
 </template>
 
 <script>
+
 
 export default {
     name: "LoginComponent",

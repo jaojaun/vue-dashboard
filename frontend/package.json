@@ -8,19 +8,29 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@mui/material": "^5.15.18",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
+    "primevue": "^3.52.0",
+    "styled-components": "^6.1.11",
     "vue": "^3.4.24",
     "vue-axios": "^3.5.2",
     "vue-router": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -33,6 +43,7 @@
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "node-sass": "^9.0.0",
+    "nuxt-primevue": "^0.3.1",
     "sass": "^1.75.0",
     "sass-loader": "^10.5.2",
     "stylus": "^0.63.0",

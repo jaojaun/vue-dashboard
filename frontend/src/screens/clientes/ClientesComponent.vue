@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
         <dashboard-component>
             <template v-slot:slot-pages>
                 <div class="content-pages">
